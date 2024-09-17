@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "232899496269",
+    "project_id": "olanavigationnew",
+    "storage_bucket": "olanavigationnew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232899496269:android:85ff601d1480b749b44f04",
+        "android_client_info": {
+          "package_name": "com.example.olanavigationnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK8q_iKPtvDcwClYrWFsvWHZ4Rw8KKw30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

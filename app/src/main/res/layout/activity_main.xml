@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ola.maps.navigation.v5.navigation.OlaMapView
+        android:id="@+id/olaMapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlSearchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@null"
+            android:hint="@string/search_here"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearchLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_et_search"
+                android:elevation="@dimen/dp_15"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchedLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tlSearchLocation"
+            app:layout_constraintStart_toStartOf="@+id/tlSearchLocation"
+            app:layout_constraintTop_toBottomOf="@+id/tlSearchLocation"
+            tools:listitem="@layout/item_search_location" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCurrentLocation"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:layout_margin="@dimen/dp_25"
+            android:background="@drawable/bg_current_location"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/dp_30"
+            android:padding="@dimen/dp_10"
+            app:cardBackgroundColor="@color/redColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearance="@style/CornerCut">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_current_location" />
+        </com.google.android.material.card.MaterialCardView>
+    </com.ola.maps.navigation.v5.navigation.OlaMapView>
+
+    <Button
+        android:id="@+id/directionsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:drawableStart="@drawable/ic_destination_route_preview"
+        android:drawablePadding="4dp"
+        android:padding="14dp"
+        android:text="Directions"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
